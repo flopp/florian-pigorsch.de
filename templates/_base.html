@@ -1,0 +1,65 @@
+{% set base_url = "file:///home/florian/Projects/fp2" %}
+{% set base_url = "http://www.florian-pigorsch.de" %}
+{% set analytics_id = "UA-27729857-6" %}
+{% set bootstrap_theme = "simplex" %}
+
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Florian Pigorsch</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/css/bootstrap.min.css" rel="stylesheet">
+        <link rel="stylesheet" href="https:////maxcdn.bootstrapcdn.com/bootswatch/3.3.1/{{ bootstrap_theme }}/bootstrap.min.css">
+        <script src="https://code.jquery.com/jquery-2.1.3.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/js/bootstrap.min.js"></script>
+        <script src="https://apis.google.com/js/platform.js"></script>
+        {% block css %}
+        {% endblock %}
+    </head>
+    <body>
+    
+    <nav class="navbar navbar-default navbar-static-top">
+      <div class="container">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand" href="{{ base_url }}/index.html">Florian Pigorsch</a>
+        </div>
+        <div id="navbar" class="collapse navbar-collapse">
+          <ul class="nav navbar-nav navbar-right">
+            <li{% if 'home' == active_page %} class="active"{% endif %}><a href="{{ base_url }}/index.html">Home</a></li>
+            <li{% if 'projects' == active_page %} class="active"{% endif %}><a href="{{ base_url }}/projects/index.html">Projects</a></li>
+            <li{% if 'contact' == active_page %} class="active"{% endif %}><a href="{{ base_url }}/contact.html">Contact</a></li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+        
+        <div class="container">
+        {% block body %}
+        {% endblock %}
+        {% block js %}
+        {% endblock %}
+        </div>
+        
+    <footer class="footer">
+      <div class="container">
+        <p class="text-muted">&copy; <a href="mailto:mail@florian-pigorsch.de" target="_blank">Florian Pigorsch</a>, 2015.</p>
+      </div>
+    </footer>
+    
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+  ga('create', '{{ analytics_id }}', 'auto');
+  ga('send', 'pageview');
+</script>
+
+    </body>
+</html>

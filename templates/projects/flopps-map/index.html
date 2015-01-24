@@ -1,0 +1,52 @@
+{% extends "_base.html" %}
+{% set active_page = "projects" %}
+{% block body %}
+
+<h1>Flopp's Map</h1>
+
+<p class="lead"><em>Flopp's Map</em> is a single page web app that allows for simple geodesic operations, like determining the coordinates of a specific location, measuring the distance between several locations or performing a waypoint projection.<p>
+  
+<p style="text-align: center"><img src="{{ base_url }}/static/img/floppsmap-screenshot.jpg" class="img-thumbnail"></p>
+
+<p class="lead">The map attracts several hundred users per day, among them a lot of geocachers who use the map to perform geocaching related operations, for planning geocaching tours, and as a simple means to explore the world before actually going outside.</p>
+
+<p style="text-align: center">
+    <a class="btn btn-primary btn-lg" href="#" role="button" href="http://www.flopp-caching.de/" target="_blank">Jump to the <em>Flopps's Map</em> website</a>
+    <a class="btn btn-info btn-lg" href="#" role="button" href="https://github.com/flopp/FloppsTolleKarte" target="_blank">Source code on Github.com</a>
+</p>
+
+<div class="row">
+    
+    <div class="col-md-6">
+        <div class="panel panel-default">
+            <div class="panel-heading"><h2 class="panel-title">Features</h2></div>
+            <div class="panel-body">
+                <ul>
+                    <li>Draggeable markers for determining coordinates</li>
+                    <li>Geodesic operations: waypoint projection, distancce/bearing measurement</li>
+                    <li>Different mapping styles</li>
+                    <li>Searching by coordinates and location names</li>
+                    <li>Multi language interface</li>
+                    <li>Generation of permalinks to share the current map view with others</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <div class="col-md-6">
+        <div class="panel panel-default">
+            <div class="panel-heading"><h2 class="panel-title">Used Technologies</h2></div>
+            <div class="panel-body">
+                <ul>
+                    <li><a href="https://developers.google.com/maps/documentation/javascript/reference">Google Maps Javascript API</a> for mapping</li>
+                    <li><a href="http://www.opencaching.de/okapi/introduction.html">Opencaching API (OKAPI)</a> for accessing the data bases of Opencaching sites</li>
+                    <li><a href="http://www.getbootstrap.com">Bootstrap</a> for the user interface</li>
+                    <li><a href="http://jquery.com/">jQuery</a> and various plugins for Javascript stuff</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+</div>
+
+{% endblock %}

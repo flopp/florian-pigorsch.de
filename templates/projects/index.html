@@ -1,0 +1,67 @@
+{% extends "_base.html" %}
+{% set active_page = "projects" %}
+{% block css %}
+<style>
+.project-thumbnail h3 { text-align: center; }
+</style>
+{% endblock %}
+{% block body %}
+<h1>Projects</h1>
+
+<p class="lead">Here is a collection of some personal programming projects that I've worked on over the years.</p>
+
+<div class="row">
+<div class="col-md-4 project-thumbnail">
+  <a href="{{ base_url }}/projects/flopps-map/index.html" class="thumbnail">
+    <img src="{{ base_url }}/static/img/floppsmap-thumb.jpg">
+  </a>
+  <h3>Flopp's Map</h3>
+</div>
+
+<div class="col-md-4 project-thumbnail">
+  <a href="{{ base_url }}/projects/random-airports/index.html" class="thumbnail">
+    <img src="{{ base_url }}/static/img/airports-thumb.jpg">
+  </a>
+  <h3>Random Airports</h3>
+</div>
+
+<div class="col-md-4 project-thumbnail">
+  <a href="{{ base_url }}/projects/safari-map/index.html" class="thumbnail">
+    <img src="{{ base_url }}/static/img/safari-thumb.jpg">
+  </a>
+  <h3>Safari Map</h3>
+</div>
+
+</div>
+
+<div class="row">
+  
+<div class="col-md-4 project-thumbnail">
+  <a href="{{ base_url }}/projects/wallpapers/index.html" class="thumbnail">
+    <img src="{{ base_url }}/static/img/wallpapers-thumb.png">
+  </a>
+  <h3>Wallpaper Generator</h3>
+</div>
+
+<div class="col-md-4 project-thumbnail">
+  <a href="https://github.com/flopp?tab=repositories" target="_blank" class="thumbnail">
+    <img src="{{ base_url }}/static/img/github-logo.jpg">
+  </a>
+  <h3>Various other projects</h3>
+</div>
+</div>
+
+
+<br />
+<p class="lead">Other projects I'm contributing to</p>
+<div class="row">
+
+<div class="col-md-4 project-thumbnail">
+  <a href="http://www.opencaching.de" target="_blank" class="thumbnail">
+    <img src="{{ base_url }}/static/img/opencaching-thumb.png">
+  </a>
+  <h3>Opencaching.de</h3>
+</div>
+
+</div>
+{% endblock %}
