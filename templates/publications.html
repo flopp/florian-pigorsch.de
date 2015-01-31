@@ -1,0 +1,256 @@
+{% extends "_base.html" %}
+{% set active_page = "publications" %}
+
+{%- macro pub_head(title) -%}
+    <div class="panel-heading"><h3 class="panel-title">{{ title }}</h3></div>
+{%- endmacro %}
+
+{%- macro pub_pdf(url, name) -%}
+    Download the PDF: <a target="_blank" href="{{ url }}">{{ name }}</a>
+{%- endmacro %}
+
+{%- macro pub_author_florian() -%} <b>Florian Pigorsch</b> {%- endmacro %}
+{%- macro pub_author_stefan() -%} <a href="http://www.informatik.uni-freiburg.de/~disch" target="_blank">Stefan Disch</a> {%- endmacro %}
+{%- macro pub_author_christoph() -%} <a href="http://www.informatik.uni-freiburg.de/~scholl/" target="_blank">Christoph Scholl</a> {%- endmacro %}
+{%- macro pub_author_werner() -%} <a href="http://ses.informatik.uni-oldenburg.de/en/staff_member.php?psearch=Damm" target="_blank" >Werner Damm</a> {%- endmacro %}
+{%- macro pub_author_uwe() -%} <a href="http://www.mpi-sb.mpg.de/~uwe/" target="_blank">Uwe Waldmann</a> {%- endmacro %}
+{%- macro pub_author_sven() -%} <a href="http://ira.informatik.uni-freiburg.de/src/team_view.php?teamID=59" target="_blank">Sven Reimer</a> {%- endmacro %}
+{%- macro pub_author_sk() -%} <a href="http://ira.informatik.uni-freiburg.de/src/team_view.php?teamID=47" target="_blank">Stefan Kupferschmid</a> {%- endmacro %}
+{%- macro pub_author_bernd() -%} <a href="http://ira.informatik.uni-freiburg.de/src/team_view.php?teamID=4" target="_blank">Bernd Becker</a> {%- endmacro %}
+
+{% block body %}
+
+<h1>Publications</h1>
+
+Here is a list of scientific publications that I contributed to as the main author or as a co-author. 
+Similar collections can be found at my <a href="http://www2.informatik.uni-freiburg.de/~pigorsch/" target="_blank">university page</a>, or my publication lists at <a href="https://scholar.google.de/citations?user=01KVo-UAAAAJ" target="_blank">Google Scholar</a> and <a href="https://www.researchgate.net/profile/Florian_Pigorsch" target="_blank">ResearchGate</a>.
+
+<h2>2014</h2>
+<div class="row">
+  <div class="col-md-6">
+    <div class="panel panel-default">
+      {{ pub_head("Simple Interpolants for Linear Arithmetic") }}
+      <div class="panel-body">
+        {{ pub_author_christoph() }}, {{ pub_author_florian() }}, {{ pub_author_stefan() }}, <a target="_blank" href="http://www1.informatik.uni-mainz.de/~althaus/">Ernst Althaus</a><br />
+        <i>In "Design, Automation and Test in Europe" (DATE14)</i>, March 2014, Dresden, Germany<br />
+        {{ pub_pdf("http://abs.informatik.uni-freiburg.de/papers/2014/SPDA_2014.pdf", "SPDA_2014.pdf") }}
+      </div>
+    </div>
+  </div>
+</div>
+
+
+<h2>2013</h2>
+<div class="row">
+  <div class="col-md-6">
+    <div class="panel panel-default">
+      {{ pub_head("Lemma Localization: A Practical Method for Downsizing SMT-Interpolants") }}
+      <div class="panel-body">
+        {{ pub_author_florian() }}, and {{ pub_author_christoph() }}<br />
+        <i>In "Design, Automation and Test in Europe" (DATE13)</i>, March 2013, Grenoble, France<br />
+        {{ pub_pdf("http://abs.informatik.uni-freiburg.de/papers/2013/PS_2013.pdf", "PS_2013.pdf") }}
+      </div>
+    </div>
+  </div>
+</div>
+
+
+<h2>2012</h2>
+<div class="row">
+  <div class="col-md-6">
+    <div class="panel panel-default">
+      {{ pub_head("Exact and fully symbolic verification of linear hybrid automata with large discrete state spaces") }}
+      <div class="panel-body">
+        {{ pub_author_werner() }}, Henning Dierks, {{ pub_author_stefan() }}, <a target="_blank" href="http://www.mpi-inf.mpg.de/~hagemann/">Willem Hagemann</a>, {{ pub_author_florian() }}, {{ pub_author_christoph() }}, {{ pub_author_uwe() }}, and <a target="_blank" href="http://ses.informatik.uni-oldenburg.de/en/staff_member.php?psearch=Wirtz">Boris Wirtz</a><br />
+        <i>In "Science of Computer Programming", Special Issue on Automated Verification of Critical Systems</i>, 2011<br />
+        {{ pub_pdf("http://abs.informatik.uni-freiburg.de/papers/2012/DDD+_2012.pdf", "DDD+2012.pdf") }}
+      </div>
+    </div>
+  </div>
+  
+  <div class="col-md-6">
+    <div class="panel panel-default">
+      {{ pub_head("Enhanced Integration of QBF Solving Techniques") }}
+      <div class="panel-body">
+        {{ pub_author_sven() }}, {{ pub_author_florian() }}, {{ pub_author_christoph() }}, and {{ pub_author_bernd() }}<br />
+        <i>15th ITG/GI/GMM Workshop "Methoden und Beschreibungssprachen zur Modellierung und Verifikation von Schaltungen und Systemen"</i>, March 2012, Kaiserslautern, Germany<br />
+        {{ pub_pdf("http://abs.informatik.uni-freiburg.de/papers/2012/RPSB_2012.pdf", "RPSB_2012.pdf") }}
+      </div>
+    </div>
+  </div>
+</div>
+
+  
+<h3>2011</h3>
+<div class="row">
+  <div class="col-md-6">
+    <div class="panel panel-default">
+      {{ pub_head("Fully Symbolic Model Checking for Timed Automata") }}
+      <div class="panel-body">
+        <a target="_blank" href="http://abs.informatik.uni-freiburg.de/src/team_view.php?teamID=38">Georges Morbé</a>, {{ pub_author_christoph() }}, and {{ pub_author_florian() }}<br />
+        <i>In Proceedings of "Computer Aided Verification" (CAV11)</i>, 2011, Snowbird, Utah<br />
+        {{ pub_pdf("http://abs.informatik.uni-freiburg.de/papers/2011/MPS_2011.pdf", "MPS_2011.pdf") }}
+      </div>
+    </div>
+  </div>
+  
+  <div class="col-md-6">
+    <div class="panel panel-default">
+      {{ pub_head("Integration of Orthogonal QBF Solving Techniques") }}
+      <div class="panel-body">
+        {{ pub_author_sven() }}, {{ pub_author_florian() }}, {{ pub_author_christoph() }}, and {{ pub_author_bernd() }}<br />
+        <i>In Proceedings of "Design, Automation and Test in Europe" (DATE11)</i>, March 2011, Grenoble, France<br />
+        {{ pub_pdf("http://abs.informatik.uni-freiburg.de/papers/2011/RPSB_2011.pdf", "RPSB_2011.pdf") }}
+      </div>
+    </div>
+  </div>
+</div>
+  
+
+<h3>2010</h3>
+<div class="row">
+  <div class="col-md-6">
+    <div class="panel panel-default">
+      {{ pub_head("An AIG-Based QBF-solver using SAT for preprocessing") }}
+      <div class="panel-body">
+        {{ pub_author_florian() }}, {{ pub_author_christoph() }}<br />
+        <i>In Proceedings of the 47th "Design Automation Conference" (DAC47)</i>, pages 170-175, June 2010, Anaheim, CA, USA<br />
+        {{ pub_pdf("http://ira.informatik.uni-freiburg.de/papers/2010/PS_2010.pdf", "PS_2010.pdf") }}
+      </div>
+    </div>
+  </div>
+</div>
+  
+  
+<h3>2009</h3>
+<div class="row">
+  <div class="col-md-6">
+    <div class="panel panel-default">
+      {{ pub_head("AIGSolve - An AIG-Based QBF Solver") }}
+      <div class="panel-body">
+        {{ pub_author_florian() }}<br />
+        <i>Presentation at Dagstuhl Seminar <a target="_blank" href="http://www.dagstuhl.de/en/program/calendar/semhp/?semnr=09461">"Algorithms and Applications for Next Generation SAT Solvers"</a>, November 2009</i>
+      </div>
+    </div>
+  </div>
+    
+  <div class="col-md-6">    
+    <div class="panel panel-default">
+      {{ pub_head("Exploiting Structure in an AIG Based QBF Solver") }}
+      <div class="panel-body">
+        {{ pub_author_florian() }}, {{ pub_author_christoph() }}<br />
+        <i>Proc. Conf. on "Design, Automation and Test in Europe" (DATE09)</i>, April 2009, Nice, France<br />
+        {{ pub_pdf("http://abs.informatik.uni-freiburg.de/papers/2009/PS_2009b.pdf", "PS_2009b.pdf") }}
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="row">
+  <div class="col-md-6">  
+    <div class="panel panel-default">
+      {{ pub_head("Using Implications for Optimizing State Set Representations of Linear Hybrid Systems") }}
+      <div class="panel-body">
+        {{ pub_author_florian() }}, {{ pub_author_christoph() }}<br />
+        <i>11th ITG/GI/GMM Workshop "Methoden und Beschreibungssprachen zur Modellierung und Verifikation von Schaltungen und Systemen"</i>, March 2009, Berlin, Germany<br />
+        {{ pub_pdf("http://www.avacs.org/Publikationen/Open/pigorsch.mbmv09.pdf", "pigorsch-mbmv09.pdf") }}
+      </div>
+    </div>
+  </div>
+  
+  <div class="col-md-6"> 
+    <div class="panel panel-default">
+      {{ pub_head("Computing optimized representations for non-convex polyhedra by detection and removal of redundant linear constraints") }}
+      <div class="panel-body">
+        {{ pub_author_christoph() }}, {{ pub_author_stefan() }}, {{ pub_author_florian() }}, {{ pub_author_sk() }}<br />
+        <i>Proceedings of the 15th International Conference on Tools and Algorithms for the Construction and Analysis of Systems (TACAS)</i>, March 2009, York, UK<br />
+        {{ pub_pdf("http://abs.informatik.uni-freiburg.de/papers/2009/SDPK_2009.pdf", "SDPK_2009.pdf") }}
+      </div>
+    </div>
+  </div>
+</div>
+  
+  
+<h3>2008</h3>
+<div class="row">
+  <div class="col-md-6">
+    <div class="panel panel-default">
+      {{ pub_head("Using an SMT Solver and Craig Interpolation to Detect and Remove Redundant Linear Constraints in Representations of Non-Convex Polyhedra") }}
+      <div class="panel-body">
+        {{ pub_author_christoph() }}, {{ pub_author_stefan() }}, {{ pub_author_florian() }}, {{ pub_author_sk() }}<br />
+        <i>International Workshop on "Satisfiability Modulo Theories"</i>, July 2008, Princeton, USA<br />
+        {{ pub_pdf("http://ira.informatik.uni-freiburg.de/papers/2008/SDPK_2008.pdf", "SDPK_2008.pdf") }}
+      </div>
+    </div>
+  </div>
+</div>
+  
+  
+<h3>2007</h3>
+<div class="row">
+  <div class="col-md-6">
+    <div class="panel panel-default">
+      {{ pub_head("Exact state set representation in the verification of linear hybrid systems with large discrete state space") }}
+      <div class="panel-body">
+        {{ pub_author_werner() }}, {{ pub_author_stefan() }}, <a target="_blank" href="http://ses.informatik.uni-oldenburg.de/en/staff_member.php?psearch=Hungar">Hardi Hungar</a>, <a target="_blank" href="http://www.mpi-inf.mpg.de/~sjacobs/">Swen Jacobs</a>, <a target="_blank" href="http://seshome.informatik.uni-oldenburg.de/~jun/">Jun Pang</a>, {{ pub_author_florian() }}, {{ pub_author_christoph() }}, {{ pub_author_uwe() }}, and <a target="_blank" href="http://ses.informatik.uni-oldenburg.de/en/staff_member.php?psearch=Wirtz">Boris Wirtz</a><br />
+        In <i>5th International Symposium on Automated Technology for Verification and Analysis</i>, Tokyo, Japan, October 22-25, 2007.<br />
+        <a target="_blank" href="http://link.springer.com/chapter/10.1007%2F978-3-540-75596-8_30">SpringerLink</a>
+      </div>
+    </div>
+  </div>
+</div>
+  
+  
+<h3>2006</h3>
+<div class="row">
+  <div class="col-md-6">
+    <div class="panel panel-default">
+      {{ pub_head("Advanced Unbounded Model Checking Based on AIGs, BDD Sweeping, And Quantifier Scheduling") }}
+      <div class="panel-body">
+        {{ pub_author_florian() }}, {{ pub_author_christoph() }}, and {{ pub_author_stefan() }}<br />
+        In Proceedings of the <i>Conference on Formal Methods in Computer Aided Design (FMCAD 2006)</i>, pages 89-96, November 12-16 2006, San Jose, CA, USA. IEEE Computer Society Press.<br />
+        {{ pub_pdf("http://abs.informatik.uni-freiburg.de/papers/2006/PSD_2006b.pdf", "PSD_2006b.pdf") }}
+      </div>
+    </div>
+  </div>
+  
+  <div class="col-md-6">  
+    <div class="panel panel-default">
+      {{ pub_head("Automatic Verification of Hybrid Systems with Large Discrete State Space") }}
+      <div class="panel-body">
+        {{ pub_author_werner() }}, {{ pub_author_stefan() }}, <a target="_blank" href="http://ses.informatik.uni-oldenburg.de/en/staff_member.php?psearch=Hungar">Hardi Hungar</a>, <a target="_blank" href="http://seshome.informatik.uni-oldenburg.de/~jun/">Jun Pang</a>, {{ pub_author_florian() }}, {{ pub_author_christoph() }}, {{ pub_author_uwe() }}, and <a target="_blank" href="http://ses.informatik.uni-oldenburg.de/en/staff_member.php?psearch=Wirtz">Boris Wirtz</a><br />
+        In <em>Automated Technology for Verification and Analysis, 4th International Symposium, ATVA 2006</em>, LNCS 4218, pages 276-291, Beijing, China, October 23-26, 2006. Springer-Verlag.<br />
+        <a target="_blank" href="http://www.springerlink.com/content/9026r9668h3kr772">SpringerLink</a>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="row">
+  <div class="col-md-6">    
+    <div class="panel panel-default">
+      {{ pub_head("Advanced unbounded model checking by using AIGs, BDD sweeping and quantifier scheduling") }}
+      <div class="panel-body">
+        {{ pub_author_florian() }}, {{ pub_author_christoph() }}, and {{ pub_author_stefan() }}<br />
+        <i>9th ITG/GI/GMM Workshop "Methoden und Beschreibungssprachen zur Modellierung und Verifikation von Schaltungen und Systemen"</i>, February 2006, Dresden, Germany<br />
+        {{ pub_pdf("http://abs.informatik.uni-freiburg.de/papers/2006/PSD_2006.pdf", "PSD_2006.pdf") }}
+      </div>
+    </div>
+  </div>
+</div>
+
+  
+<h3>2005</h3>
+<div class="row">
+  <div class="col-md-6">
+    <div class="panel panel-default">
+      {{ pub_head("And-Inverter-Graphen und deren Anwendung in der Verifikation") }}
+      <div class="panel-body">
+        {{ pub_author_florian() }}<br />
+        Diplomarbeit, Albert-Ludwigs-Universit&auml;t Freiburg, July 2005
+      </div>
+    </div>
+  </div>
+</div>
+
+{% endblock %}

@@ -21,6 +21,11 @@
   <changefreq>weekly</changefreq>
 </url>
 <url>
+  <loc>BASEURL/publications.html</loc>
+  <lastmod>TIMESTAMP</lastmod>
+  <changefreq>weekly</changefreq>
+</url>
+<url>
   <loc>BASEURL/projects/index.html</loc>
   <lastmod>TIMESTAMP</lastmod>
   <changefreq>weekly</changefreq>
