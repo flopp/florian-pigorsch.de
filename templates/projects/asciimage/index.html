@@ -1,0 +1,44 @@
+{% extends "_base.html" %}
+{% set active_page = "projects" %}
+{% block body %}
+<h1>QtAsciimage Library + Editor</h1>
+
+<p class="lead">QtAsciimage is a C++/Qt library for rendering images specified in the <a href="http://asciimage.org/" target="_blank">Asciimage format</a>. Along with the library comes a graphical editor for that kind of images - QtAsciimageEditor.</p>
+<p style="text-align: center"><img src="{{ base_url }}/static/img/qtasciimage-screenshot.png" class="img-thumbnail"></p>
+<p style="text-align: center">
+    <a class="btn btn-info btn-lg" href="#" role="button" href="https://github.com/flopp/QtAsciimage" target="_blank">Source code on Github.com</a>
+</p>
+
+<div class="row">
+    
+    <div class="col-md-6">
+        <div class="panel panel-default">
+            <div class="panel-heading"><h2 class="panel-title">Features</h2></div>
+            <div class="panel-body">
+                <ul>
+                  <li>Library: extended Asciimage format for specifying rendering styles</li>
+                  <li>Library: direct rendering to QImage</li>
+                  <li>Library: QIconEngine support for providing Qt applications with resolution independant icons</li>
+                  <li>Editor: grid template</li>
+                  <li>Editor: instant preview</li>
+                  <li>Editor: preview scaling</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    
+    <div class="col-md-6">
+        <div class="panel panel-default">
+            <div class="panel-heading"><h2 class="panel-title">Used Technologies</h2></div>
+            <div class="panel-body">
+                <ul>
+                    <li><a href="http://www.qt.io/" target="_blank">Qt</a>, the cross platform UI framework</li>
+                    <li><a href="http://twitter.com/cparnot" target="_blank">@cparnot</a>'s <a href="http://asciimage.org/" target="_blank">Asciimage</a> specification</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+</div>
+
+{% endblock %}

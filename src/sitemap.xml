@@ -8,46 +8,51 @@
 <url>
   <loc>BASEURL/</loc>
   <lastmod>TIMESTAMP</lastmod>
-  <changefreq>weekly</changefreq>
+  <changefreq>daily</changefreq>
 </url>
 <url>
   <loc>BASEURL/index.html</loc>
   <lastmod>TIMESTAMP</lastmod>
-  <changefreq>weekly</changefreq>
+  <changefreq>daily</changefreq>
 </url>
 <url>
   <loc>BASEURL/contact.html</loc>
   <lastmod>TIMESTAMP</lastmod>
-  <changefreq>weekly</changefreq>
+  <changefreq>daily</changefreq>
 </url>
 <url>
   <loc>BASEURL/publications.html</loc>
   <lastmod>TIMESTAMP</lastmod>
-  <changefreq>weekly</changefreq>
+  <changefreq>daily</changefreq>
 </url>
 <url>
   <loc>BASEURL/projects/index.html</loc>
   <lastmod>TIMESTAMP</lastmod>
-  <changefreq>weekly</changefreq>
+  <changefreq>daily</changefreq>
 </url>
 <url>
   <loc>BASEURL/projects/flopps-map/index.html</loc>
   <lastmod>TIMESTAMP</lastmod>
-  <changefreq>weekly</changefreq>
+  <changefreq>daily</changefreq>
 </url>
 <url>
   <loc>BASEURL/projects/random-airports/index.html</loc>
   <lastmod>TIMESTAMP</lastmod>
-  <changefreq>weekly</changefreq>
+  <changefreq>daily</changefreq>
 </url>
 <url>
   <loc>BASEURL/projects/safari-map/index.html</loc>
   <lastmod>TIMESTAMP</lastmod>
-  <changefreq>weekly</changefreq>
+  <changefreq>daily</changefreq>
 </url>
 <url>
   <loc>BASEURL/projects/wallpapers/index.html</loc>
   <lastmod>TIMESTAMP</lastmod>
-  <changefreq>weekly</changefreq>
+  <changefreq>daily</changefreq>
+</url>
+<url>
+  <loc>BASEURL/projects/asciimage/index.html</loc>
+  <lastmod>TIMESTAMP</lastmod>
+  <changefreq>daily</changefreq>
 </url>
 </urlset>
