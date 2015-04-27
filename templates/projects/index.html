@@ -1,74 +1,62 @@
 {% extends "_base.html" %}
 {% set active_page = "projects" %}
-{% block css %}
-<style>
-.project-thumbnail h3 { text-align: center; }
-</style>
-{% endblock %}
 {% block body %}
-<h1>Projects</h1>
 
-<p class="lead">Here is a collection of some personal programming projects that I've worked on over the years.</p>
+{%- macro project(id, name, image) -%}
+<div class="col s12 m6 l4">
+    <a href="{{ base_url }}/projects/{{ id }}/index.html">
+        <div class="card {{ card_color }}">
+            <div class="card-content center">
+                <img class="responsive-img" src="{{ base_url }}/static/img/{{ image }}">
+                <h5 class="card-title {{ card_text }}">{{ name }}</h5>
+            </div>
+        </div>
+    </a>
+</div>
+{%- endmacro %}
 
-<div class="row">
-<div class="col-md-4 project-thumbnail">
-  <a href="{{ base_url }}/projects/flopps-map/index.html" class="thumbnail">
-    <img src="{{ base_url }}/static/img/floppsmap-thumb.jpg">
-  </a>
-  <h3>Flopp's Map</h3>
+{%- macro project_ext(url, name, image) -%}
+<div class="col s12 m6 l4">
+    <a href="{{ url }}">
+        <div class="card {{ card_color }}">
+            <div class="card-content center">
+                <img class="responsive-img" src="{{ base_url }}/static/img/{{ image }}">
+                <h5 class="card-title {{ card_text }}">{{ name }}</h5>
+            </div>
+        </div>
+    </a>
+</div>
+{%- endmacro %}
+
+<div class="section">
+    <div class="row">
+        <div class="col s12">
+            <h1 class="header {{ header_text_color }}">Projects</h1>
+            <p class="caption">Here is a collection of some personal programming projects that I've worked on over the years.</p>
+        </div>
+    </div>
+    
+    <div class="row">
+        {{ project("flopps-map", "Flopp's Map", "floppsmap-thumb.jpg") }}
+        {{ project("random-airports", "Random Airports", "airports-thumb.jpg") }}
+        {{ project("safari-map", "Safari Map", "safari-thumb.jpg") }}
+    </div>
+
+    <div class="row">
+        {{ project("wallpapers", "Wallpaper Generator", "wallpapers-thumb.png") }}
+        {{ project("asciimage", "QtAsciimage", "asciimage-thumb.png") }}
+        {{ project_ext("https://github.com/flopp?tab=repositories", "Various other projects", "github-logo.jpg") }}
+    </div>
+
+    <div class="row">
+        <div class="col s12 m9 l10">
+            <p class="caption">Other projects I'm contributing to.</p>
+        </div>
+    </div>
+    
+    <div class="row">
+        {{ project_ext("http://www.opencaching.de", "Opencaching.de", "opencaching-thumb.png") }}
+    </div>
 </div>
 
-<div class="col-md-4 project-thumbnail">
-  <a href="{{ base_url }}/projects/random-airports/index.html" class="thumbnail">
-    <img src="{{ base_url }}/static/img/airports-thumb.jpg">
-  </a>
-  <h3>Random Airports</h3>
-</div>
-
-<div class="col-md-4 project-thumbnail">
-  <a href="{{ base_url }}/projects/safari-map/index.html" class="thumbnail">
-    <img src="{{ base_url }}/static/img/safari-thumb.jpg">
-  </a>
-  <h3>Safari Map</h3>
-</div>
-
-</div>
-
-<div class="row">
-  
-<div class="col-md-4 project-thumbnail">
-  <a href="{{ base_url }}/projects/wallpapers/index.html" class="thumbnail">
-    <img src="{{ base_url }}/static/img/wallpapers-thumb.png">
-  </a>
-  <h3>Wallpaper Generator</h3>
-</div>
-
-<div class="col-md-4 project-thumbnail">
-  <a href="{{ base_url }}/projects/asciimage/index.html" class="thumbnail">
-    <img src="{{ base_url }}/static/img/asciimage-thumb.png">
-  </a>
-  <h3>QtAsciimage</h3>
-</div>
-
-<div class="col-md-4 project-thumbnail">
-  <a href="https://github.com/flopp?tab=repositories" target="_blank" class="thumbnail">
-    <img src="{{ base_url }}/static/img/github-logo.jpg">
-  </a>
-  <h3>Various other projects</h3>
-</div>
-</div>
-
-
-<br />
-<p class="lead">Other projects I'm contributing to</p>
-<div class="row">
-
-<div class="col-md-4 project-thumbnail">
-  <a href="http://www.opencaching.de" target="_blank" class="thumbnail">
-    <img src="{{ base_url }}/static/img/opencaching-thumb.png">
-  </a>
-  <h3>Opencaching.de</h3>
-</div>
-
-</div>
 {% endblock %}

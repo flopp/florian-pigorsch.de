@@ -1,69 +1,74 @@
 {% extends "_base.html" %}
 {% set active_page = "contact" %}
-
 {% block body %}
-<h1>Contact</h1>
 
-<div class="row">
-  
-<div class="col-md-4">
-    <div class="panel panel-default">
-        <div class="panel-heading"><h2 class="panel-title">Postal Address</h2></div>
-        <div id="hcard-Florian-Pigorsch" class="vcard panel-body lead">
-          <span class="fn">Florian Pigorsch</span>
-          <div class="adr">
-              <div class="street-address">Hurstbrunnenstrasse 5</div>
-              <span class="postal-code">79117</span> <span class="locality">Freiburg</span>,
-              <span class="country-name">Germany</span>
-          </div>
-          <br />
-          <br />
-          <p style="text-align: center">
-              <a href="https://www.google.com/maps/place/Hurstbrunnenstra%C3%9Fe+5,+79117+Freiburg+im+Breisgau" target="_blank">
-                  <img class="img-thumbnail" src="http://maps.googleapis.com/maps/api/staticmap?zoom=11&size=300x200&markers=color:blue|47.984964,7.908113">
-              </a>
-          </p>
-      </div>
+<div class="section">
+    <div class="row">
+        <div class="col s12">
+             <h1 class="header {{ header_text_color }}">Contact</h1>
+        </div>
     </div>
-</div>
 
-<div class="col-md-4">
-    <div class="panel panel-default">
-      <div class="panel-heading"><h2 class="panel-title">Messaging</h2></div>
-      <div class="panel-body lead">
-          <p>Feel free to contact me via</p>
-          <ul class="list-group">
-              <li class="list-group-item">Mail: <a class="email" href="mailto:mail@florian-pigorsch.de" target="_blank">mail@florian-pigorsch.de</a></li>
-              <li class="list-group-item">Google Hangouts: <g:hangout render="createhangout"></g:hangout>
-              </li>
-              <li class="list-group-item"><a href="https://threema.ch/" target="_blank">Threema</a>: HF6C3W4D</li>
-          </ul> 
-          <p>If you want to send me an encryped mail, use my <a href="{{ base_url }}/static/florian-pigorsch.asc" target="_blank">GPG key</a> (Fingerprint: <tt>897B 3AE3 EA96 98D1 EE58  C992 3287 5B48 6E79 D68F</tt>) which is also available on several key servers and on <a href="https://keybase.io/flopp/" target="_blank">my Keybase.io profile</a>.
-          </p>
-      </div>
-    </div>
-</div>
-
-<div class="col-md-4">
-    <div class="panel panel-default">
-        <div class="panel-heading"><h2 class="panel-title">The Web</h2></div>
-        <div class="panel-body lead">
-            <p>
-                Of course you can find me on the web - usually appearing unter my full name or either as 'fpigorsch' or 'flopp' depending on the availability of the usernames ;)
-            </p>
-            <ul class="list-group">
-                <li class="list-group-item"><a class="url" href="https://google.com/+FlorianPigorsch" target="_blank">Google+</a></li>
-                <li class="list-group-item"><a class="url" href="https://www.facebook.com/florian.pigorsch" target="_blank">Facebook</a></li>
-                <li class="list-group-item"><a class="url" href="https://twitter.com/floppgc" target="_blank">Twitter</a></li>
-                <li class="list-group-item"><a class="url" href="https://www.linkedin.com/profile/view?id=297272433" target="_blank">LinkedIn</a></li>
-                <li class="list-group-item"><a class="url" href="https://www.xing.com/profile/Florian_Pigorsch" target="_blank">Xing</a></li>
-                <li class="list-group-item"><a class="url" href="https://github.com/flopp" target="_blank">Github</a></li>
-                <li class="list-group-item"><a class="url" href="http://stackoverflow.com/users/1816149/flopp" target="_blank">Stack Overflow</a></li>
-                <li class="list-group-item"><a class="url" href="http://www.reddit.com/user/fpigorsch/" target="_blank">Reddit</a></li>
-            </ul>
+    <div class="row">
+        <div class="col l4 m6 s12">
+            <div class="card {{ card_color }}">
+                <div class="card-content">
+                    <span class="card-title black-text">Postal Address</span>
+                    <div id="hcard-Florian-Pigorsch" class="vcard">
+                        <span class="fn">Florian Pigorsch</span>
+                        <div class="adr">
+                            <div class="street-address">Hurstbrunnenstrasse 5</div>
+                            <span class="postal-code">79117</span> <span class="locality">Freiburg</span>,
+                            <span class="country-name">Germany</span>
+                        </div>
+                        <br />
+                        <br />
+                        <p class="center">
+                            <a href="https://www.google.com/maps/place/Hurstbrunnenstra%C3%9Fe+5,+79117+Freiburg+im+Breisgau" target="_blank">
+                                <img class="responsive-img" src="http://maps.googleapis.com/maps/api/staticmap?zoom=11&size=300x200&markers=color:blue|47.984964,7.908113">
+                            </a>
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="col l4 m6 s12">
+            <div class="card {{ card_color }}">
+                <div class="card-content">
+                    <span class="card-title black-text">Messaging</span>
+                    <p>Feel free to contact me via</p>
+                    <ul class="collection">
+                        <li class="collection-item">Mail: <a class="email" href="mailto:mail@florian-pigorsch.de" target="_blank">mail@florian-pigorsch.de</a> <i class="secondary-content fa fa-envelope"></i></li>
+                        <li class="collection-item">Google Hangouts: <g:hangout render="createhangout"></g:hangout></li>
+                        <li class="collection-item"><a href="https://threema.ch/" target="_blank">Threema</a>: HF6C3W4D <i class="secondary-content fa fa-lock"></i></li>
+                    </ul> 
+                    <p>If you want to send me an encryped mail, use my <a href="{{ base_url }}/static/florian-pigorsch.asc" target="_blank">GPG key</a> (Fingerprint: <tt>897B 3AE3 EA96 98D1 EE58  C992 3287 5B48 6E79 D68F</tt>) which is also available on several key servers and on <a href="https://keybase.io/flopp/" target="_blank">my Keybase.io profile</a>.</p>
+                </div>
+            </div>
+        </div>
+        
+        <div class="col l4 m6 s12">
+            <div class="card {{ card_color }}">
+                <div class="card-content">
+                    <span class="card-title black-text">The Web</span>
+                    <p>
+                        Of course you can find me on the web - usually appearing unter my full name or either as 'fpigorsch' or 'flopp' depending on the availability of the usernames ;)
+                    </p>
+                    <ul class="collection">
+                        <li class="collection-item"><a class="url" href="https://google.com/+FlorianPigorsch" target="_blank"><i class="secondary-content fa fa-google-plus"></i> Google+</a></li>
+                        <li class="collection-item"><a class="url" href="https://www.facebook.com/florian.pigorsch" target="_blank"><i class="secondary-content fa fa-facebook"></i> Facebook</a></li>
+                        <li class="collection-item"><a class="url" href="https://twitter.com/floppgc" target="_blank"><i class="secondary-content fa fa-twitter"></i> Twitter</a></li>
+                        <li class="collection-item"><a class="url" href="https://www.linkedin.com/profile/view?id=297272433" target="_blank"><i class="secondary-content fa fa-linkedin"></i> LinkedIn</a></li>
+                        <li class="collection-item"><a class="url" href="https://www.xing.com/profile/Florian_Pigorsch" target="_blank"><i class="secondary-content fa fa-xing"></i> Xing</a></li>
+                        <li class="collection-item"><a class="url" href="https://github.com/flopp" target="_blank"><i class="secondary-content fa fa-github"></i> Github</a></li>
+                        <li class="collection-item"><a class="url" href="http://stackoverflow.com/users/1816149/flopp" target="_blank"><i class="secondary-content fa fa-stack-overflow"></i> Stack Overflow</a></li>
+                        <li class="collection-item"><a class="url" href="http://www.reddit.com/user/fpigorsch/" target="_blank"><i class="secondary-content fa fa-reddit"></i> Reddit</a></li>
+                    </ul>
+                </div>
+            </div>
         </div>
     </div>
 </div>
-        
-</div>
+
 {% endblock %}

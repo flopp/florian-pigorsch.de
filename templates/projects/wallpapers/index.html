@@ -1,42 +1,48 @@
 {% extends "_base.html" %}
 {% set active_page = "projects" %}
 {% block body %}
-<h1>Wallpaper Generator</h1>
 
-<p class="lead"><em>Random Wallpapers</em> is a python based generator for random wallpaper images that can be used as desktop backgrounds.</p>
-<p style="text-align: center"><img src="{{ base_url }}/static/img/wallpapers-animation.gif" class="img-thumbnail"></p>
-
-<p style="text-align: center">
-    <a class="btn btn-info btn-lg" href="#" role="button" href="https://github.com/flopp/RandomWallpapers" target="_blank">Source code on Github.com</a>
-</p>
-
-<div class="row">
-    
-    <div class="col-md-6">
-        <div class="panel panel-default">
-            <div class="panel-heading"><h2 class="panel-title">Features</h2></div>
-            <div class="panel-body">
-                <ul>
-                  <li>Several generators: Circles, Squares, Stripes, Triangles</li>
-                  <li>Visually pleasing color schemes</li>
-                  <li>Rich command line interface</li>
-                </ul>
-            </div>
+<div class="section">
+    <div class="row">
+        <div class="col s12">
+            <h1 class="header {{ header_text_color }}">Wallpaper Generator</h1>
+            
+            <p class="caption"><em>Random Wallpapers</em> is a python based generator for random wallpaper images that can be used as desktop backgrounds.</p>
+            
+            <p class="center"><img class="responsive-img" src="{{ base_url }}/static/img/wallpapers-animation.gif"></p>
+            
+            <p class="center">
+                <a class="btn" href="#" role="button" href="https://github.com/flopp/RandomWallpapers" target="_blank">Source code on Github.com</a>
+            </p>
         </div>
     </div>
     
-    <div class="col-md-6">
-        <div class="panel panel-default">
-            <div class="panel-heading"><h2 class="panel-title">Used Technologies</h2></div>
-            <div class="panel-body">
-                <ul>
-                    <li><a href="http://cairographics.org/pycairo/">pycairo</a> for generating the graphics in python</li>
-                    <li><a href="https://github.com/elbaschid/python-colourlovers" target="_blank">python-colourlovers</a> for accessing the color commuity website <a href="http://www.colourlovers.com" target="_blank">ColourLovers.com</a></li>
-                    <li><a href="http://www.numpy.org/" target="_blank">NumPy</a> and <a href="http://www.scipy.org/" target="_blank">SciPy</a> for generating Delaunay triangulations (used in the Triangles mode)</li>
-                </ul>
+    <div class="row">
+        <div class="col l6 m12">
+            <div class="card {{ card_color }}">
+                <div class="card-content">
+                    <span class="card-title black-text">Features</span>
+                    <ul class="collection">
+                        <li class="collection-item">Several generators: Circles, Squares, Stripes, Triangles</li>
+                        <li class="collection-item">Visually pleasing color schemes</li>
+                        <li class="collection-item">Rich command line interface</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        
+        <div class="col l6 m12">
+            <div class="card {{ card_color }}">
+                <div class="card-content">
+                    <span class="card-title black-text">Used Technologies</span>
+                    <ul class="collection">
+                        <li class="collection-item"><a href="http://cairographics.org/pycairo/">pycairo</a> for generating the graphics in python</li>
+                        <li class="collection-item"><a href="https://github.com/elbaschid/python-colourlovers" target="_blank">python-colourlovers</a> for accessing the color commuity website <a href="http://www.colourlovers.com" target="_blank">ColourLovers.com</a></li>
+                        <li class="collection-item"><a href="http://www.numpy.org/" target="_blank">NumPy</a> and <a href="http://www.scipy.org/" target="_blank">SciPy</a> for generating Delaunay triangulations (used in the Triangles mode)</li>
+                    </ul>
+                </div>
             </div>
         </div>
     </div>
-    
 </div>
 {% endblock %}
