@@ -1,0 +1,47 @@
+{% extends "_base.html" %}
+{% set active_page = "projects" %}
+{% block body %}
+
+<div class="section">
+    <div class="row">
+        <div class="col s12">
+            <h1 class="header {{ header_text_color }}">Alcazar Generator + Solver</h1>
+            
+            <p class="caption">alcazar-gen is a SAT-based solver/generator for the logic puzzle <a href="http://www.theincrediblecompany.com/alcazar-1/" target="_blank">Alcazar</a>.</p>
+            
+            <p class="center"><img src="{{ base_url }}/static/img/alcazar-screenshot.jpg" class="responsive-img"></p>
+            
+            <p class="center">
+                <a class="btn" href="#" role="button" href="https://github.com/flopp/alcazar-gen" target="_blank">Source code on Github.com</a>
+            </p>
+        </div>
+    </div>
+    
+    <div class="row">
+        <div class="col l6 m12">
+            <div class="card {{ card_color }}">
+                <div class="card-content">
+                    <span class="card-title black-text">Features</span>
+                    <ul class="collection">
+                      <li class="collection-item">Generate uniquely solvable Alcazar puzzles of arbitrary size (although generating big puzzles may take a HUGE amount of time)</li>
+                      <li class="collection-item">You can specify puzzle templates to generate puzzles with certain geometric properties (e.g. 4-room-puzzles)</li>
+                      <li class="collection-item">Advanced SAT-techniques ("lifting" for removing unneeded walls, "incremental SAT" for speed)</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        
+        <div class="col l6 m12">
+            <div class="card {{ card_color }}">
+                <div class="card-content">
+                    <span class="card-title black-text">Used Technologies</span>
+                    <ul class="collection">
+                        <li class="collection-item"><a href="https://github.com/niklasso/minisat" target="_blank">MiniSAT</a>, an open source, minimalistic SAT-solver</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+{% endblock %}
