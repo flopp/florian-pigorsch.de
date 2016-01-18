@@ -55,4 +55,19 @@
   <lastmod>TIMESTAMP</lastmod>
   <changefreq>daily</changefreq>
 </url>
+<url>
+  <loc>BASEURL/projects/alcazar-gen/index.html</loc>
+  <lastmod>TIMESTAMP</lastmod>
+  <changefreq>daily</changefreq>
+</url>
+<url>
+  <loc>BASEURL/projects/gol-sat/index.html</loc>
+  <lastmod>TIMESTAMP</lastmod>
+  <changefreq>daily</changefreq>
+</url>
+<url>
+  <loc>BASEURL/projects/gpx-track-poster/index.html</loc>
+  <lastmod>TIMESTAMP</lastmod>
+  <changefreq>daily</changefreq>
+</url>
 </urlset>
