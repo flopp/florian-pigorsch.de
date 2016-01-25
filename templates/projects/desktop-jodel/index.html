@@ -1,0 +1,51 @@
+{% extends "_base.html" %}
+{% set active_page = "projects" %}
+{% block body %}
+
+<div class="section">
+    <div class="row">
+        <div class="col s12">
+            <h1 class="header {{ header_text_color }}">Desktop Jodel Client</h1>
+            <p class="caption">
+                A inofficial, Qt-based desktop client for the <a href="http://jodel-app.com/" target="_blank">Jodel</a> chat protocol.
+            </p>
+            <p class="center">
+                <img class="center responsive-img" src="{{ base_url }}/static/img/desktopjodel-screenshot.jpg">
+            </p>
+            <p class="center">
+                <a class="btn" role="button" href="https://github.com/flopp/DesktopJodel" target="_blank">Source code on Github.com</a>
+            </p>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col l6 m12">
+            <div class="card {{ card_color }}">
+                <div class="card-content">
+                    <span class="card-title black-text">Features</span>
+                    <ul class="collection">
+                        <li class="collection-item">Basic functions of the Jodel chat protocol (voting, post colors, images)</li>
+                        <li class="collection-item">Display of posts' (coarse) locations</li>
+                        <li class="collection-item">Manual setting of location</li>
+                        <li class="collection-item">Manual selection of post color</li>
+                        <li class="collection-item">Nice emoji images</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        
+        <div class="col l6 m12">
+            <div class="card {{ card_color }}">
+                <div class="card-content">
+                    <span class="card-title black-text">Used Technologies</span>
+                    <ul class="collection">
+                        <li class="collection-item"><a href="http://www.qt.io/" target="_blank">Qt 5</a></li>
+                        <li class="collection-item">Emoji images from <a href="https://github.com/Ranks/emojione" target="_blank">emojione</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+{% endblock %}
