@@ -75,4 +75,9 @@
   <lastmod>TIMESTAMP</lastmod>
   <changefreq>daily</changefreq>
 </url>
+<url>
+  <loc>BASEURL/projects/unicode-explorer/index.html</loc>
+  <lastmod>TIMESTAMP</lastmod>
+  <changefreq>daily</changefreq>
+</url>
 </urlset>
