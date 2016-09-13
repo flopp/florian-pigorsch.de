@@ -3,4 +3,5 @@
 ./build.sh
 
 . config.txt
-ncftpput -u $LOGIN -p $PASSWD -R $SERVER $BASE/ deploy/*
+ssh $SERVER mkdir -p $BASE
+rsync -avz --progress deploy/. $SERVER:$BASE
