@@ -80,4 +80,9 @@
   <lastmod>TIMESTAMP</lastmod>
   <changefreq>daily</changefreq>
 </url>
+<url>
+  <loc>BASEURL/projects/go-staticmaps/index.html</loc>
+  <lastmod>TIMESTAMP</lastmod>
+  <changefreq>daily</changefreq>
+</url>
 </urlset>
