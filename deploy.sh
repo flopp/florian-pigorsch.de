@@ -1,6 +1,6 @@
 #!/bin/bash
 
-./build.sh
+set -euo pipefail
 
 . config.txt
 ssh $SERVER mkdir -p $BASE

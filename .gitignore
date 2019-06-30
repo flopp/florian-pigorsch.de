@@ -1,4 +1,7 @@
+.vscode
+venv
 config.txt
+config.json
 deploy/index.html
 deploy/contact.html
 deploy/publications.html
