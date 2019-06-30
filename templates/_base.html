@@ -15,6 +15,7 @@
         <meta name="google-site-verification" content="ZWguhWGxH8yFqaSr5bp-BX9pEDf-ToP5I7SgAFm97OA" />
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/{{ materialize_version }}/css/materialize.min.css" />
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/{{ font_awesome_version }}/css/all.min.css" />
+        <link rel="stylesheet" href="{{ base_url }}/static/css/main.css" />
         {% block css %}
         {% endblock %}
     </head>
@@ -40,7 +41,7 @@
         </div>
     </nav>
         
-    <div class="container">
+    <div id="main" class="container">
         {% block body %}
         {% endblock %}
         {% block js %}
