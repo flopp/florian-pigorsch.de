@@ -29,7 +29,7 @@ if __name__ == "__main__":
     site = staticjinja.Site.make_site(outpath=output_dir, env_globals=config)
     site.render()
 
-    timestamp = datetime.datetime.now().strftime("%Y-%m-%dT%H:%M:%S")
+    timestamp = datetime.datetime.now().strftime("%Y-%m-%d")
 
     with open(os.path.join(output_dir, "sitemap.xml"), "w") as sitemap_file:
         sitemap_file.write('<?xml version="1.0" encoding="UTF-8"?>\n')
