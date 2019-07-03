@@ -3,79 +3,76 @@
 {% set title = "Contact Information" %}
 {% block body %}
 
-<div class="content">
-    <h1 class="title">Contact</h1>
+<h1 class="title">Contact</h1>
 
-    <div class="columns is-multiline"> 
-        <div class="column is-one-third">
-            <div class="card equal-height">
-                <header class="card-header">
-                    <p class="card-header-title">
-                        Postal Address
-                    </p>
-                </header>
-                <div class="card-content">
-                    <div class="content vcard" id="hcard-Florian-Pigorsch">
-                        <span class="fn">Florian Pigorsch</span>
-                        <div class="adr">
-                            <div class="street-address">Hurstbrunnenstrasse 5</div>
-                            <span class="postal-code">79117</span> <span class="locality">Freiburg</span>,
-                            <span class="country-name">Germany</span>
-                        </div>
-                        <br />
-                        <br />
-                        <p class="center">
-                            <a href="https://www.google.com/maps/place/Hurstbrunnenstra%C3%9Fe+5,+79117+Freiburg+im+Breisgau" target="_blank">
-                                <img class="image is-3by2" src="https://maps.googleapis.com/maps/api/staticmap?zoom=11&size=300x200&markers=color:blue|47.984964,7.908113&key={{ google_api_key }}">
-                            </a>
-                        </p>
+<div class="columns is-multiline"> 
+    <div class="column is-one-third">
+        <div class="card equal-height">
+            <header class="card-header">
+                <p class="card-header-title">
+                    Postal Address
+                </p>
+            </header>
+            <div class="card-content">
+                <div class="vcard" id="hcard-Florian-Pigorsch">
+                    <span class="fn">Florian Pigorsch</span>
+                    <div class="adr">
+                        <div class="street-address">Hurstbrunnenstrasse 5</div>
+                        <span class="postal-code">79117</span> <span class="locality">Freiburg</span>,
+                        <span class="country-name">Germany</span>
                     </div>
+                    <br />
+                    <figure class="image is-3by2">
+                        <a href="https://www.google.com/maps/place/Hurstbrunnenstra%C3%9Fe+5,+79117+Freiburg+im+Breisgau" target="_blank">
+                            <img src="https://maps.googleapis.com/maps/api/staticmap?zoom=11&size=300x200&markers=color:blue|47.984964,7.908113&key={{ google_api_key }}">
+                        </a>
+                    </figure>
                 </div>
             </div>
         </div>
+    </div>
 
-        <div class="column is-one-third">
-            <div class="card equal-height">
-                <header class="card-header">
-                    <p class="card-header-title">
-                        Messaging
-                    </p>
-                </header>
-                <div class="card-content">
-                    <div class="content">
-                        <p>Feel free to contact me via</p>
-                        <ul>
-                            <li>Mail: <a class="email" href="mailto:mail@florian-pigorsch.de" target="_blank">mail@florian-pigorsch.de</a> <i class="secondary-content fa fa-envelope"></i></li>
-                            <li><a href="https://threema.ch/" target="_blank">Threema</a>: HF6C3W4D <i class="secondary-content fa fa-lock"></i></li>
-                        </ul> 
-                        <p>If you want to send me an encryped mail, use my <a href="{{ base_url }}/static/florian-pigorsch.asc" target="_blank">GPG key</a> (Fingerprint: <tt>897B 3AE3 EA96 98D1 EE58  C992 3287 5B48 6E79 D68F</tt>) which is also available on several key servers and on <a href="https://keybase.io/flopp/" target="_blank">my Keybase.io profile</a>.</p>
-                    </div>
+    <div class="column is-one-third">
+        <div class="card equal-height">
+            <header class="card-header">
+                <p class="card-header-title">
+                    Messaging
+                </p>
+            </header>
+            <div class="card-content">
+                <div class="content">
+                    <p>Feel free to contact me via</p>
+                    <ul>
+                        <li>Mail: <a class="email" href="mailto:mail@florian-pigorsch.de" target="_blank">mail@florian-pigorsch.de</a> <i class="secondary-content fa fa-envelope"></i></li>
+                        <li><a href="https://threema.ch/" target="_blank">Threema</a>: HF6C3W4D <i class="secondary-content fa fa-lock"></i></li>
+                    </ul> 
+                    <p>If you want to send me an encryped mail, use my <a href="{{ base_url }}/static/florian-pigorsch.asc" target="_blank">GPG key</a> (Fingerprint: <tt>897B 3AE3 EA96 98D1 EE58  C992 3287 5B48 6E79 D68F</tt>) which is also available on several key servers and on <a href="https://keybase.io/flopp/" target="_blank">my Keybase.io profile</a>.</p>
                 </div>
             </div>
         </div>
-        
-        <div class="column is-one-third">
-            <div class="card equal-height">
-                <header class="card-header">
-                    <p class="card-header-title">
-                        The Web
+    </div>
+    
+    <div class="column is-one-third">
+        <div class="card equal-height">
+            <header class="card-header">
+                <p class="card-header-title">
+                    The Web
+                </p>
+            </header>
+            <div class="card-content">
+                <div class="content">
+                    <p>
+                        Of course you can find me on the web - usually appearing unter my full name or either as 'fpigorsch' or 'flopp' depending on the availability of the usernames ;)
                     </p>
-                </header>
-                <div class="card-content">
-                    <div class="content">
-                        <p>
-                            Of course you can find me on the web - usually appearing unter my full name or either as 'fpigorsch' or 'flopp' depending on the availability of the usernames ;)
-                        </p>
-                        <ul>
-                            <li><a class="url" href="https://www.facebook.com/florian.pigorsch" target="_blank"><i class="secondary-content fab fa-facebook"></i> Facebook</a></li>
-                            <li><a class="url" href="https://twitter.com/floppgc" target="_blank"><i class="secondary-content fab fa-twitter"></i> Twitter</a></li>
-                            <li><a class="url" href="https://www.linkedin.com/profile/view?id=297272433" target="_blank"><i class="secondary-content fab fa-linkedin"></i> LinkedIn</a></li>
-                            <li><a class="url" href="https://www.xing.com/profile/Florian_Pigorsch" target="_blank"><i class="secondary-content fab fa-xing"></i> Xing</a></li>
-                            <li><a class="url" href="https://github.com/flopp" target="_blank"><i class="secondary-content fab fa-github"></i> Github</a></li>
-                            <li><a class="url" href="http://stackoverflow.com/users/1816149/flopp" target="_blank"><i class="secondary-content fab fa-stack-overflow"></i> Stack Overflow</a></li>
-                            <li><a class="url" href="http://www.reddit.com/user/fpigorsch/" target="_blank"><i class="secondary-content fab fa-reddit"></i> Reddit</a></li>
-                        </ul>
-                    </div>
+                    <ul>
+                        <li><a class="url" href="https://www.facebook.com/florian.pigorsch" target="_blank"><i class="secondary-content fab fa-facebook"></i> Facebook</a></li>
+                        <li><a class="url" href="https://twitter.com/floppgc" target="_blank"><i class="secondary-content fab fa-twitter"></i> Twitter</a></li>
+                        <li><a class="url" href="https://www.linkedin.com/profile/view?id=297272433" target="_blank"><i class="secondary-content fab fa-linkedin"></i> LinkedIn</a></li>
+                        <li><a class="url" href="https://www.xing.com/profile/Florian_Pigorsch" target="_blank"><i class="secondary-content fab fa-xing"></i> Xing</a></li>
+                        <li><a class="url" href="https://github.com/flopp" target="_blank"><i class="secondary-content fab fa-github"></i> Github</a></li>
+                        <li><a class="url" href="http://stackoverflow.com/users/1816149/flopp" target="_blank"><i class="secondary-content fab fa-stack-overflow"></i> Stack Overflow</a></li>
+                        <li><a class="url" href="http://www.reddit.com/user/fpigorsch/" target="_blank"><i class="secondary-content fab fa-reddit"></i> Reddit</a></li>
+                    </ul>
                 </div>
             </div>
         </div>
