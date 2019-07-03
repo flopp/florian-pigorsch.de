@@ -1,46 +1,46 @@
 {% extends "_base.html" %}
 {% set active_page = "projects" %}
+{% set title = "Unicode Explorer" %}
 {% block body %}
 
-<div class="section">
-    <div class="row">
-        <div class="col s12">
-            <h1 class="header {{ header_text_color }}">Unicode Explorer</h1>
+<div class="content">
+    <h1 class="title">Unicode Explorer</h1>
             
-            <p class="caption"><em>Unicode Explorer</em> is an experimental webapp that let's you explorer Unicode code blocks and individual Unicode characters.<p>
+    <p>
+        <em>Unicode Explorer</em> is an experimental webapp that let's you explorer Unicode code blocks and individual Unicode characters.
+    </p>
   
-            <p class="center"><img src="{{ base_url }}/static/img/unicode-screenshot.jpg" class="responsive-img"></p>
-  
-            <p class="center">
-                <a class="btn" href="https://unicode.flopp.net/" target="_blank">Jump to the <em>Unicode Explorer</em> website</a>
-                <a class="btn" role="button" href="https://github.com/flopp/unicode-explorer" target="_blank">Source code on Github.com</a>
-            </p>
-        </div>
-    </div>
+    {{ image("unicode-screenshot.jpg", "Unicode Explorer") }}
+
+    {{ buttons2("https://unicode.flopp.net/", "Jump to the \"Unicode Explorer\" website", "https://github.com/flopp/unicode-explorer", "Source code on Github.com") }}
     
-    <div class="row">
-        <div class="col l6 m12">
-            <div class="card {{ card_color }}">
+    <div class="columns is-multiline">
+        <div class="column is-half">
+            <div class="card equal-height">
+                <header class="card-header"><p class="card-header-title">Features</p></header>
                 <div class="card-content">
-                    <span class="card-title black-text">Features</span>
-                    <ul class="collection">
-                        <li class="collection-item">Responsive layout</li>
-                        <li class="collection-item">Display of individual Unicode characters including related and look-alike characters</li>
-                        <li class="collection-item">Display of Unicode code blocks</li>
-                    </ul>
+                    <div class="content">
+                        <ul>
+                            <li>Responsive layout</li>
+                            <li>Display of individual Unicode characters including related and look-alike characters</li>
+                            <li>Display of Unicode code blocks</li>
+                        </ul>
+                    </div>
                 </div>
             </div>
         </div>
         
-        <div class="col l6 m12">
-            <div class="card {{ card_color }}">
+        <div class="column is-half">
+            <div class="card equal-height">
+                <header class="card-header"><p class="card-header-title">Used Technologies</p></header>
                 <div class="card-content">
-                    <span class="card-title black-text">Used Technologies</span>
-                    <ul class="collection">
-                        <li class="collection-item"><a href="http://flask.pocoo.org/" target="_blank">Flask microframework</a></li>
-                        <li class="collection-item"><a href="https://milligram.github.io/" target="_blank">Milligram CSS framework</a></li>
-                        <li class="collection-item"><a href="http://unicode.org/" target="_blank">Unicode data from Unicode.org</a></li>
-                    </ul>
+                    <div class="content">
+                        <ul>
+                            <li><a href="http://flask.pocoo.org/" target="_blank">Flask microframework</a></li>
+                            <li><a href="https://milligram.github.io/" target="_blank">Milligram CSS framework</a></li>
+                            <li><a href="http://unicode.org/" target="_blank">Unicode data from Unicode.org</a></li>
+                        </ul>
+                    </div>
                 </div>
             </div>
         </div>

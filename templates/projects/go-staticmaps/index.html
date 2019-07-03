@@ -1,49 +1,50 @@
 {% extends "_base.html" %}
 {% set active_page = "projects" %}
+{% set title = "go-staticmaps" %}
 {% block body %}
 
-<div class="section">
-    <div class="row">
-        <div class="col s12">
-            <h1 class="header {{ header_text_color }}">go-staticmaps - Render static maps using go and OpenStreeMaps</h1>
+<div class="content">
+    <h1 class="title">go-staticmaps - Render static maps using go and OpenStreeMaps</h1>
             
-            <p class="caption">A go (golang) library and command line tool to render static map images using OpenStreetMap tiles.</p>
+    <p>
+        A go (golang) library and command line tool to render static map images using OpenStreetMap tiles.
+    </p>
             
-            <p class="center"><img src="{{ base_url }}/static/img/go-staticmaps.jpg" class="responsive-img"></p>
+    {{ image("go-staticmaps.jpg", "go-staticmaps") }}
             
-            <p class="center">
-                <a class="btn" role="button" href="https://github.com/flopp/go-staticmaps" target="_blank">Source code on Github.com</a>
-            </p>
-        </div>
-    </div>
+    {{ buttons1("https://github.com/flopp/go-staticmaps", "Source code on Github.com") }}
     
-    <div class="row">
-        <div class="col l6 m12">
-            <div class="card {{ card_color }}">
+    <div class="columns is-multiline">
+        <div class="column is-half">
+            <div class="card equal-height">
+                <header class="card-header"><p class="card-header-title">Features</p></header>
                 <div class="card-content">
-                    <span class="card-title black-text">Features</span>
-                    <ul class="collection">
-                      <li class="collection-item">Full featured go mapping library</li>
-                      <li class="collection-item">Powerful command line client</li>
-                      <li class="collection-item">Multiple tile providers</li>
-                      <li class="collection-item">Colored markers</li>
-                      <li class="collection-item">Colored lines</li>
-                      <li class="collection-item">Colored (filled) polygons</li>
-                      <li class="collection-item">Automatic determination of a "good" zoom level</li>
-                    </ul>
+                    <div class="content">
+                        <ul>
+                            <li>Full featured go mapping library</li>
+                            <li>Powerful command line client</li>
+                            <li>Multiple tile providers</li>
+                            <li>Colored markers</li>
+                            <li>Colored lines</li>
+                            <li>Colored (filled) polygons</li>
+                            <li>Automatic determination of a "good" zoom level</li>
+                        </ul>
+                    </div>
                 </div>
             </div>
         </div>
         
-        <div class="col l6 m12">
-            <div class="card {{ card_color }}">
+        <div class="column is-half">
+            <div class="card equal-height">
+                <header class="card-header"><p class="card-header-title">Used Technologies</p></header>
                 <div class="card-content">
-                    <span class="card-title black-text">Used Technologies</span>
-                    <ul class="collection">
-                        <li class="collection-item"><a href="https://golang.org/" target="_blank">The Go Progamming Language</a></li>
-                        <li class="collection-item"><a href="https://github.com/fogleman/gg" target="_blank">Go Graphics</a>, a 2D graphics library written in go</li>
-                        <li class="collection-item">...</li>
-                    </ul>
+                    <div class="content">
+                        <ul>
+                            <li><a href="https://golang.org/" target="_blank">The Go Progamming Language</a></li>
+                            <li><a href="https://github.com/fogleman/gg" target="_blank">Go Graphics</a>, a 2D graphics library written in go</li>
+                            <li>...</li>
+                        </ul>
+                    </div>
                 </div>
             </div>
         </div>

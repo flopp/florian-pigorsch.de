@@ -2,24 +2,15 @@
 {% set active_page = "home" %}
 {% block body %}
 
-<div class="section">
-    <div class="row">
-        <h1 class="header {{ header_text_color }}">Hey there!</h1>
-    </div>
-    
-    <div class="row">
-        <div class="col s12">
-            <img class="responsive-img" src="{{ base_url }}/static/img/florian-pigorsch.jpg">
-        </div>
-    </div>
-    
-    <div class="row">
-        <div class="col s12">
-My name is Florian Pigorsch. I'm a software engineer at <a href="http://www.concept.de/" target="_blank">Concept Engineering</a> in Freiburg/Germany, where I develop software for the EDA industry.<br />
-In addition to professional software development - which I mostly do in C and C++ - I spend a good part of my spare time coding on <a href="{{ base_url }}/projects/index.html">personal software projects</a>. Most of them are web based and somehow related to maps.<br />
-If you are interested in my former scientific career, take a look at my <a href="{{ base_url }}/publications.html">publications</a>.
-        </div>
-    </div>
-</div>
+<div class="content">
+    <h1 class="title">Hey there!</h1>
+ 
+    {{ image("florian-pigorsch.jpg", "Florian Pigorsch") }}
 
+    <p>
+        My name is Florian Pigorsch. I'm a software engineer at <a href="http://www.concept.de/" target="_blank">Concept Engineering</a> in Freiburg/Germany, where I develop software for the EDA industry.<br />
+        In addition to professional software development - which I mostly do in C and C++ - I spend a good part of my spare time coding on <a href="{{ base_url }}/projects/index.html">personal software projects</a>. Most of them are web based and somehow related to maps.<br />
+        If you are interested in my former scientific career, take a look at my <a href="{{ base_url }}/publications.html">publications</a>.
+    </p>
+</div>
 {% endblock %}

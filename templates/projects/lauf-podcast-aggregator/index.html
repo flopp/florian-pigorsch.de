@@ -1,36 +1,33 @@
 {% extends "_base.html" %}
 {% set active_page = "projects" %}
+{% set title = "Lauf Podcast Aggregator" %}
 {% block body %}
 
-<div class="section">
-    <div class="row">
-        <div class="col s12">
-            <h1 class="header {{ header_text_color }}">Lauf Podcast Aggregator</h1>
-            <p class="caption">
-                An aggregator for german-language running podcasts.
-            </p>
-            <p class="center">
-                <img class="center responsive-img" src="{{ base_url }}/static/img/lauf-podcast-aggregator.jpg">
-            </p>
-            <p class="center">
-                <a class="btn" href="https://lauf-podcasts.flopp.net/" target="_blank">Jump to the <em>Lauf Podcasts</em> website</a>
-                <a class="btn" role="button" href="https://github.com/flopp/lauf-podcast-aggregator" target="_blank">Source code on Github.com</a>
-            </p>
-        </div>
-    </div>
+<div class="content">
+    <h1 class="title">Lauf Podcast Aggregator</h1>
+    
+    <p>
+        An aggregator for german-language running podcasts.
+    </p>
+    
+    {{ image("lauf-podcast-aggregator.jpg", "Lauf Podcast Aggregator") }}
 
-    <div class="row">        
-        <div class="col l6 m12">
-            <div class="card {{ card_color }}">
+    {{ buttons2("https://lauf-podcasts.flopp.net/", "Jump to the \"Lauf Podcasts\" website", "https://github.com/flopp/lauf-podcast-aggregator", "Source code on Github.com") }}
+
+    <div class="columns is-multiline">
+        <div class="column is-half">
+            <div class="card equal-height">
+                <header class="card-header"><p class="card-header-title">Used Technologies</p></header>
                 <div class="card-content">
-                    <span class="card-title black-text">Used Technologies</span>
-                    <ul class="collection">
-                        <li class="collection-item"><a href="https://github.com/tkrajina/gpxpy" target="_blank">gpxpy</a> for parsing GPX files</li>
-                        <li class="collection-item"><a href="https://github.com/gpodder/podcastparser" target="_blank">podcastparser</a> for parsing poscast rss/atom feeds</li>
-                        <li class="collection-item"><a href="https://2.python-requests.org/en/master/" target="_blank">requests</a> for fetching feeds</li>
-                        <li class="collection-item"><a href="https://python-pillow.org/ target="_blank">pillow</a> for creating cover thumbnails</li>
-                        <li class="collection-item"><a href="http://jinja.pocoo.org/" target="_blank">jinja2</a> for processing HTML templates</li>
-                    </ul>
+                    <div class="content">
+                        <ul>
+                            <li><a href="https://github.com/tkrajina/gpxpy" target="_blank">gpxpy</a> for parsing GPX files</li>
+                            <li><a href="https://github.com/gpodder/podcastparser" target="_blank">podcastparser</a> for parsing poscast rss/atom feeds</li>
+                            <li><a href="https://2.python-requests.org/en/master/" target="_blank">requests</a> for fetching feeds</li>
+                            <li><a href="https://python-pillow.org/ target="_blank">pillow</a> for creating cover thumbnails</li>
+                            <li><a href="http://jinja.pocoo.org/" target="_blank">jinja2</a> for processing HTML templates</li>
+                        </ul>
+                    </div>
                 </div>
             </div>
         </div>

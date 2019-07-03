@@ -1,47 +1,47 @@
 {% extends "_base.html" %}
 {% set active_page = "projects" %}
+{% set title = "GPX Track Poster Generator" %}
 {% block body %}
 
-<div class="section">
-    <div class="row">
-        <div class="col s12">
-            <h1 class="header {{ header_text_color }}">GPX Track Poster</h1>
-            <p class="caption">
-                Generator for visually appealing posters from your GPS tracks.
-            </p>
-            <p class="center">
-                <img class="center responsive-img" src="{{ base_url }}/static/img/gpx-track-poster-screenshot.jpg">
-            </p>
-            <p class="center">
-                <a class="btn" role="button" href="https://github.com/flopp/GpxTrackPoster" target="_blank">Source code on Github.com</a>
-            </p>
-        </div>
-    </div>
+<div class="content">
+    <h1 class="title">GPX Track Poster</h1>
+  
+    <p>
+        Generator for visually appealing posters from your GPS tracks.
+    </p>
+    
+    {{ image("gpx-track-poster-screenshot.jpg", "GPX Track Poster") }}
 
-    <div class="row">
-        <div class="col l6 m12">
-            <div class="card {{ card_color }}">
+    {{ buttons1("https://github.com/flopp/GpxTrackPoster", "Source code on Github.com") }}
+
+    <div class="columns is-multiline">
+        <div class="column is-half">
+            <div class="card equal-height">
+                <header class="card-header"><p class="card-header-title">Features</p></header>
                 <div class="card-content">
-                    <span class="card-title black-text">Features</span>
-                    <ul class="collection">
-                        <li class="collection-item">'grid', 'calendar' and 'heatmap' modes</li>
-                        <li class="collection-item">Track statistics at the poster's footer (total, average, max track length, etc.)</li>
-                        <li class="collection-item">Highlighting of 'special' tracks (i.e. events, competitions)</li>
-                        <li class="collection-item">Fully customizable via command line options</li>
-                        <li class="collection-item">Caching of parsed track data for faster subsequent executions of the generator</li>
-                    </ul>
+                    <div class="content">
+                        <ul>
+                            <li>'grid', 'calendar' and 'heatmap' modes</li>
+                            <li>Track statistics at the poster's footer (total, average, max track length, etc.)</li>
+                            <li>Highlighting of 'special' tracks (i.e. events, competitions)</li>
+                            <li>Fully customizable via command line options</li>
+                            <li>Caching of parsed track data for faster subsequent executions of the generator</li>
+                        </ul>
+                    </div>
                 </div>
             </div>
         </div>
         
-        <div class="col l6 m12">
-            <div class="card {{ card_color }}">
+        <div class="column is-half">
+            <div class="card equal-height">
+                <header class="card-header"><p class="card-header-title">Used Technologies</p></header>
                 <div class="card-content">
-                    <span class="card-title black-text">Used Technologies</span>
-                    <ul class="collection">
-                        <li class="collection-item"><a href="https://github.com/tkrajina/gpxpy" target="_blank">gpxpy</a> for parsing GPX files</li>
-                        <li class="collection-item"><a href="https://bitbucket.org/mozman/svgwrite" target="_blank">svgwrite</a> for generating SVG files</li>
-                    </ul>
+                    <div class="content">
+                        <ul>
+                            <li><a href="https://github.com/tkrajina/gpxpy" target="_blank">gpxpy</a> for parsing GPX files</li>
+                            <li><a href="https://bitbucket.org/mozman/svgwrite" target="_blank">svgwrite</a> for generating SVG files</li>
+                        </ul>
+                    </div>
                 </div>
             </div>
         </div>

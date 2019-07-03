@@ -3,66 +3,60 @@
 {% block body %}
 
 {%- macro project(id, name, image) -%}
-<div class="col s12 m6 l4">
-    <a href="{{ base_url }}/projects/{{ id }}/index.html">
-        <div class="card {{ card_color }}">
-            <div class="card-content center">
-                <img class="responsive-img" src="{{ base_url }}/static/img/{{ image }}">
-                <h5 class="card-title {{ card_text }}">{{ name }}</h5>
+<div class="column is-one-quarter">
+    <div class="card equal-height">
+        <a href="{{ base_url }}/projects/{{ id }}/index.html">
+            <div class="card-image">
+                <figure class="image is-square">
+                    <img src="{{ base_url }}/static/img/{{ image }}" alt="{{ name }}">
+                </figure>
             </div>
-        </div>
-    </a>
+            <div class="card-content">
+                <h2 class="card-header-title">{{ name }}</h2>
+            </div>
+        </a>
+    </div>
 </div>
 {%- endmacro %}
 
 {%- macro project_ext(url, name, image) -%}
-<div class="col s12 m6 l4">
-    <a href="{{ url }}">
-        <div class="card {{ card_color }}">
-            <div class="card-content center">
-                <img class="responsive-img" src="{{ base_url }}/static/img/{{ image }}">
-                <h5 class="card-title {{ card_text }}">{{ name }}</h5>
+<div class="column is-one-quarter">
+    <div class="card equal-height">
+        <a href="{{ url }}">
+            <div class="card-image">
+                <figure class="image is-square">
+                    <img src="{{ base_url }}/static/img/{{ image }}" alt="{{ name }}">
+                </figure>
             </div>
-        </div>
-    </a>
+            <div class="card-content">
+                <h2 class="card-header-title">{{ name }}</h2>
+            </div>
+        </a>
+    </div>
 </div>
 {%- endmacro %}
 
-<div class="section">
-    <div class="row">
-        <div class="col s12">
-            <h1 class="header {{ header_text_color }}">Projects</h1>
-            <p class="caption">Here is a collection of some personal programming projects that I've worked on over the years.</p>
-        </div>
-    </div>
-    
-    <div class="row">
-        {{ project("flopps-map", "Flopp's Map", "floppsmap-thumb.jpg") }}
-        {{ project("random-airports", "Random Airports", "airports-thumb.jpg") }}
-        {{ project("safari-map", "Safari Map", "safari-thumb.jpg") }}
-    </div>
+<div class="content">
+<h1 class="title">Projects</h1>
+<p>
+    Here is a collection of some personal programming projects that I've worked on over the years.
+</p>
+</div>
 
-    <div class="row">
-        {{ project("wallpapers", "Wallpaper Generator", "wallpapers-thumb.png") }}
-        {{ project("asciimage", "QtAsciimage", "asciimage-thumb.png") }}
-        {{ project("alcazar-gen", "Alcazar Generator/Solver", "alcazar-thumb.jpg") }}
-    </div>
-    
-    <div class="row">
-        {{ project("gol-sat", "Game of Life Solver", "gol-thumb.png") }}
-        {{ project("gpx-track-poster", "Poster Generator for GPS Tracks", "gpx-track-poster-thumb.jpg") }}
-        {{ project("desktop-jodel", "Desktop Client for Jodel", "desktopjodel-thumb.jpg") }}
-    </div>
-    
-    <div class="row">
-        {{ project("unicode-explorer", "Unicode Explorer", "unicode-thumb.jpg") }}
-        {{ project("go-staticmaps", "go-staticmaps", "go-staticmaps-thumb.jpg") }}
-        {{ project("lauf-podcast-aggregator", "Lauf Podcast Aggregator", "lauf-podcast-aggregator-thumb.jpg") }}
-    </div>
-
-    <div class="row">
-        {{ project_ext("https://github.com/flopp?tab=repositories", "Various other projects", "github-logo.jpg") }}
-    </div>
+<div class="columns is-multiline">
+    {{ project("flopps-map", "Flopp's Map", "floppsmap-thumb.jpg") }}
+    {{ project("random-airports", "Random Airports", "airports-thumb.jpg") }}
+    {{ project("safari-map", "Safari Map", "safari-thumb.jpg") }}
+    {{ project("wallpapers", "Wallpaper Generator", "wallpapers-thumb.png") }}
+    {{ project("asciimage", "QtAsciimage", "asciimage-thumb.png") }}
+    {{ project("alcazar-gen", "Alcazar Generator/Solver", "alcazar-thumb.jpg") }}
+    {{ project("gol-sat", "Game of Life Solver", "gol-thumb.png") }}
+    {{ project("gpx-track-poster", "Poster Generator for GPS Tracks", "gpx-track-poster-thumb.jpg") }}
+    {{ project("desktop-jodel", "Desktop Client for Jodel", "desktopjodel-thumb.jpg") }}
+    {{ project("unicode-explorer", "Unicode Explorer", "unicode-thumb.jpg") }}
+    {{ project("go-staticmaps", "go-staticmaps", "go-staticmaps-thumb.jpg") }}
+    {{ project("lauf-podcast-aggregator", "Lauf Podcast Aggregator", "lauf-podcast-aggregator-thumb.jpg") }}
+    {{ project_ext("https://github.com/flopp?tab=repositories", "Various other projects", "github-logo.jpg") }}
 </div>
 
 {% endblock %}

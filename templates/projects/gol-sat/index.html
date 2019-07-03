@@ -1,42 +1,43 @@
 {% extends "_base.html" %}
 {% set active_page = "projects" %}
+{% set title = "GoL-SAT" %}
 {% block body %}
 
-<div class="section">
-    <div class="row">
-        <div class="col s12">
-            <h1 class="header {{ header_text_color }}">GoL-SAT - a forward/backwards solver for the Game of Life</h1>
+<div class="content">
+    <h1 class="title">GoL-SAT - a forward/backwards solver for the Game of Life</h1>
             
-            <p class="caption">GoL-SAT is a SAT-based forward/backwards solver for Conways Game of Life.</p>
+    <p>
+        GoL-SAT is a SAT-based forward/backwards solver for Conways Game of Life.
+    </p>
             
-            <p class="center"><img src="{{ base_url }}/static/img/gol-screenshot.jpg" class="responsive-img"></p>
+    {{ image("gol-screenshot.jpg", "GoL-SAT") }}
             
-            <p class="center">
-                <a class="btn" role="button" href="https://github.com/flopp/gol-sat" target="_blank">Source code on Github.com</a>
-            </p>
-        </div>
-    </div>
+    {{ buttons1("https://github.com/flopp/gol-sat", "Source code on Github.com") }}
     
-    <div class="row">
-        <div class="col l6 m12">
-            <div class="card {{ card_color }}">
+    <div class="columns is-multiline">
+        <div class="column is-half">
+            <div class="card equal-height">
+                <header class="card-header"><p class="card-header-title">Features</p></header>
                 <div class="card-content">
-                    <span class="card-title black-text">Features</span>
-                    <ul class="collection">
-                      <li class="collection-item">Forward simulation using the standard rules of Conways Game of Life</li>
-                      <li class="collection-item">Backwards solving, i.e. find an initial configuration that leads to a specified configuration</li>
-                    </ul>
+                    <div class="content">
+                        <ul>
+                            <li>Forward simulation using the standard rules of Conways Game of Life</li>
+                            <li>Backwards solving, i.e. find an initial configuration that leads to a specified configuration</li>
+                        </ul>
+                    </div>
                 </div>
             </div>
         </div>
         
-        <div class="col l6 m12">
-            <div class="card {{ card_color }}">
+        <div class="column is-half">
+            <div class="card equal-height">
+                <header class="card-header"><p class="card-header-title">Used Technologies</p></header>
                 <div class="card-content">
-                    <span class="card-title black-text">Used Technologies</span>
-                    <ul class="collection">
-                        <li class="collection-item"><a href="https://github.com/niklasso/minisat" target="_blank">MiniSAT</a>, an open source, minimalistic SAT-solver</li>
-                    </ul>
+                    <div class="content">
+                        <ul>
+                            <li><a href="https://github.com/niklasso/minisat" target="_blank">MiniSAT</a>, an open source, minimalistic SAT-solver</li>
+                        </ul>
+                    </div>
                 </div>
             </div>
         </div>

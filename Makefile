@@ -1,6 +1,5 @@
 .PHONY: setup build-local deploy
 
-
 setup:
 	python3 -m venv venv
 	venv/bin/pip install --upgrade pip

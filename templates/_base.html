@@ -1,81 +1,115 @@
-{% set materialize_version = "1.0.0" %}
+{% set bulma_version = "0.7.5" %}
 {% set jquery_version = "3.4.1" %}
 {% set font_awesome_version = "5.9.0" %}
-
-{% set card_color = "grey lighten-4" %}
-{% set card_text = "black-text" %}
-{% set header_text_color = "orange-text" %}
-
+{%- macro image(relative_url, alt) -%}<figure class="image"><img src="{{ base_url }}/static/img/{{ relative_url}}" alt="{{ alt  }}" /></figure>{%- endmacro %}
+{%- macro buttons1(url, title) -%}
+<div class="columns is-mobile is-centered">
+    <div class="column is-narrow">
+        <div class="buttons are-medium">
+            <a class="button" href="{{ url }}" target="_blank">{{ title }}</a>
+        </div>
+    </div>
+</div>
+{%- endmacro -%}
+{%- macro buttons2(url1, title1, url2, title2) -%}
+<div class="columns is-mobile is-centered">
+    <div class="column is-narrow">
+        <div class="buttons are-medium">
+            <a class="button" href="{{ url1 }}" target="_blank">{{ title1 }}</a>
+            <a class="button" href="{{ url2 }}" target="_blank">{{ title2 }}</a>
+        </div>
+    </div>
+</div>
+{%- endmacro -%}
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" class="has-navbar-fixed-top">
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Florian Pigorsch</title>
+        <title>{% if title %}{{ title }} | {% endif %}Florian Pigorsch</title>
         {% if google_validation %}<meta name="google-site-verification" content="{{ google_validation }}" />{% endif %}
         {% if bing_validation %}<meta name="msvalidate.01" content="{{ bing_validation }}" />{% endif %}
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/{{ materialize_version }}/css/materialize.min.css" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/{{ bulma_version }}/css/bulma.min.css">
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/{{ font_awesome_version }}/css/all.min.css" />
         <link rel="stylesheet" href="{{ base_url }}/static/css/main.css" />
         {% block css %}
         {% endblock %}
     </head>
-    <body>
-    
-    <nav class="light-blue lighten-1" role="navigation">
-        <div class="nav-wrapper container">
-            <a id="logo-container" class="brand-logo" href="{{ base_url }}/index.html">Florian Pigorsch</a>
-            <ul class="right hide-on-med-and-down">
-                <li{% if 'home' == active_page %} class="active"{% endif %}><a href="{{ base_url }}/index.html">Home</a></li>
-                <li{% if 'projects' == active_page %} class="active"{% endif %}><a href="{{ base_url }}/projects/index.html">Projects</a></li>
-                <li{% if 'publications' == active_page %} class="active"{% endif %}><a href="{{ base_url }}/publications.html">Publications</a></li>
-                <li{% if 'contact' == active_page %} class="active"{% endif %}><a href="{{ base_url }}/contact.html">Contact</a></li>
-            </ul>
 
-            <ul id="nav-mobile" class="sidenav">
-                <li{% if 'home' == active_page %} class="active"{% endif %}><a href="{{ base_url }}/index.html">Home</a></li>
-                <li{% if 'projects' == active_page %} class="active"{% endif %}><a href="{{ base_url }}/projects/index.html">Projects</a></li>
-                <li{% if 'publications' == active_page %} class="active"{% endif %}><a href="{{ base_url }}/publications.html">Publications</a></li>
-                <li{% if 'contact' == active_page %} class="active"{% endif %}><a href="{{ base_url }}/contact.html">Contact</a></li>
-            </ul>
-            <a href="#" data-target="nav-mobile" class="sidenav-trigger"><i class="fas fa-bars"></i></a>
-        </div>
-    </nav>
-        
-    <div id="main" class="container">
+    <body>
+        <nav class="navbar is-fixed-top is-info has-shadow">
+            <div class="container">
+                <div class="navbar-brand">
+                    <a class="navbar-item has-text-weight-bold" href="{{ base_url }}/index.html">
+                        Florian Pigorsch
+                    </a>
+
+                    <a role="button" class="navbar-burger burger" aria-label="menu" aria-expanded="false" data-target="main-navbar">
+                        <span aria-hidden="true"></span>
+                        <span aria-hidden="true"></span>
+                        <span aria-hidden="true"></span>
+                    </a>
+                </div>
+
+                <div id="main-navbar" class="navbar-menu">
+                    <div class="navbar-start">
+                        <a class="navbar-item{% if 'home' == active_page %} is-active{% endif %}" href="{{ base_url }}/index.html">
+                            Home
+                        </a>
+                        <a class="navbar-item{% if 'pojects' == active_page %} is-active{% endif %}" href="{{ base_url }}/projects/index.html">
+                            Projects
+                        </a>
+                        <a class="navbar-item{% if 'publications' == active_page %} is-active{% endif %}" href="{{ base_url }}/publications.html">
+                            Publications
+                        </a>
+                        <a class="navbar-item{% if 'contact' == active_page %} is-active{% endif %}" href="{{ base_url }}/contact.html">
+                            Contact
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </nav>
+
+        <section class="section">
+            <div class="container">
         {% block body %}
         {% endblock %}
         {% block js %}
         {% endblock %}
-    </div>
-        
-    <footer class="page-footer orange">
-        <div class="footer-copyright">
-            <div class="container">
-                <span>&copy; 2019 <a class="white-text" href="mailto:mail@florian-pigorsch.de" target="_blank">Florian Pigorsch</a></span>
-                <span class="right">Styling: <a class="white-text" href="https://materializecss.com/" target="_blank">Materialize CSS</a></span>
             </div>
-        </div>
-    </footer>
+        </section>
+        
+        <footer class="footer">
+            <div class="footer-copyright">
+                <div class="container">
+                    <span>&copy; 2019 <a class="white-text" href="mailto:mail@florian-pigorsch.de" target="_blank">Florian Pigorsch</a></span>
+                    <span class="right">Styling: <a class="white-text" href="https://bulma.io/" target="_blank">Bulma</a></span>
+                </div>
+            </div>
+        </footer>
 
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/{{ jquery_version }}/jquery.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/{{ materialize_version }}/js/materialize.min.js"></script>
-    <script src="https://apis.google.com/js/platform.js"></script>
-    
-    <script>
-        $(".sidenav").sidenav();
-    </script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/{{ jquery_version }}/jquery.min.js"></script>
+        <script src="https://apis.google.com/js/platform.js"></script>
+        
+        <script>
+            $(document).ready(function() {
+                $(".navbar-burger").click(function() {
+                    $(".navbar-burger").toggleClass("is-active");
+                    $(".navbar-menu").toggleClass("is-active");
+                });
+            });
+        </script>
 
-    {% if google_analytics_id %}
-    <script>
-        (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-        (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-        m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-            })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
-        ga('create', '{{ google_analytics_id }}', 'auto');
-        ga('send', 'pageview');
-    </script>
-    {% endif %}
+        {% if google_analytics_id %}
+        <script>
+            (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+            (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+            m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+                })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+            ga('create', '{{ google_analytics_id }}', 'auto');
+            ga('send', 'pageview');
+        </script>
+        {% endif %}
 
     </body>
 </html>
