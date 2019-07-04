@@ -37,7 +37,7 @@
     </head>
 
     <body>
-        <nav class="navbar is-fixed-top is-info has-shadow">
+        <nav class="navbar is-fixed-top is-dark has-shadow">
             <div class="container">
                 <div class="navbar-brand">
                     <a class="navbar-item has-text-weight-bold" href="{{ base_url }}/index.html">
@@ -79,12 +79,18 @@
             </div>
         </section>
         
-        <footer class="footer">
-            <div class="footer-copyright">
-                <div class="container">
-                    <span>&copy; 2019 <a class="white-text" href="mailto:mail@florian-pigorsch.de" target="_blank">Florian Pigorsch</a></span>
-                    <span class="right">Styling: <a class="white-text" href="https://bulma.io/" target="_blank">Bulma</a></span>
-                </div>
+        <footer class="footer hero is-dark has-text-centered">
+            <div class="container">
+                <p>
+                    &copy; 2019 <a href="mailto:mail@florian-pigorsch.de" target="_blank">Florian Pigorsch</a>
+                    &nbsp;|&nbsp;
+                    Source code on <a href="https://github.com/flopp/florian-pigorsch.de" target="_blank">Github</a>
+                </p>
+                <p>
+                    <a href="https://bulma.io" target="_blank">
+                        <img src="{{ base_url }}/static/img/made-with-bulma--white.png" alt="Made with Bulma" width="192" height="36">
+                    </a>
+                </p>
             </div>
         </footer>
 
