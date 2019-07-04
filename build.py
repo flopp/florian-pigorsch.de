@@ -28,8 +28,26 @@ if __name__ == "__main__":
     site = staticjinja.Site.make_site(outpath=output_dir, env_globals=config)
     site.render()
 
-    timestamp = datetime.datetime.now().strftime("%Y-%m-%d")
+    # insert canonical urls
+    for root, subdirs, files in os.walk(output_dir):
+        for file_name in files:
+            if not file_name.endswith('.html'):
+                continue
+            path = os.path.relpath(root, output_dir)
+            if path == '.':
+                url = config["base_url"] + "/" + file_name
+            else:
+                url = config["base_url"] + "/" + path + "/" + file_name
+            lines = []
+            with open(os.path.join(root, file_name), 'r') as f:
+                for line in f:
+                    lines.append(line.replace('CANONICAL_URL', url))
+            with open(os.path.join(root, file_name), 'w') as f: 
+                for line in lines:
+                    f.write(line)
 
+    # create sitemap
+    timestamp = datetime.datetime.now().strftime("%Y-%m-%d")
     with open(os.path.join(output_dir, "sitemap.xml"), "w") as sitemap_file:
         sitemap_file.write('<?xml version="1.0" encoding="UTF-8"?>\n')
         sitemap_file.write('<urlset\n')
@@ -40,7 +58,6 @@ if __name__ == "__main__":
             for file_name in files:
                 if not file_name.endswith('.html'):
                     continue
-                print(f'{root} {file_name}')
                 path = os.path.relpath(root, output_dir)
                 if path == '.':
                     url = config["base_url"] + "/" + file_name
