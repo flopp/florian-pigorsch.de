@@ -1,0 +1,49 @@
+{% extends "_base.html" %}
+{% set active_page = "projects" %}
+{% set title = "freiburg.run" %}
+{% block body %}
+
+<div class="content">
+    <h1 class="title">freiburg.run</h1>
+
+    <p>
+        <em>freiurg.run</em> provides a list of local running events and running clubs in the region of Freiburg, Germany.
+    </p>
+
+    {{ image("freiburgrun-screenshot.png", "freiburg.run") }}
+
+
+    {{ buttons2("http://freiburg.run/", "Jump to the \"freiburg.run\" website", "https://github.com/flopp/freiburg-run", "Source code on Github.com") }}
+
+    <div class="columns is-multiline">
+        <div class="column is-half">
+            <div class="card equal-height">
+                <header class="card-header"><p class="card-header-title">Features</p></header>
+                <div class="card-content">
+                    <div class="content">
+                        <ul>
+                            <li>Leaflet-based map showing the running events</li>
+                            <li>Responsive list of events</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="column is-half">
+            <div class="card equal-height">
+                <header class="card-header"><p class="card-header-title">Used Technologies</p></header>
+                <div class="card-content">
+                    <div class="content">
+                        <ul>
+                            <li><a href="https://leafletjs.com/">Leaflet</a> for mapping</li>
+                            <li><a href="https://bulma.io/">Bulma</a> as a CSS framework</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+{% endblock %}
