@@ -33,9 +33,6 @@
         <title>{% if title %}{{ title }} | {% endif %}Florian Pigorsch</title>
         <link rel="canonical" href="CANONICAL_URL" />
         <link rel="me" href="https://freiburg.social/@flopp" />
-        {%- if google_validation -%}<meta name="google-site-verification" content="{{ google_validation }}" />{%- endif -%}
-        {%- if bing_validation -%}<meta name="msvalidate.01" content="{{ bing_validation }}" />{%- endif -%}
-        {%- if yandex_validation -%}<meta name="yandex-verification" content="{{ yandex_validation }}" />{%- endif -%}
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/{{ bulma_version }}/css/bulma.min.css" />
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/{{ font_awesome_version }}/css/all.min.css" />
         <link rel="stylesheet" href="{{ base_url }}/static/css/main.css" />
@@ -100,8 +97,7 @@
         </footer>
 
         <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/{{ jquery_version }}/jquery.min.js"></script>
-        <script src="https://apis.google.com/js/platform.js"></script>
-        
+ 
         <script>
             $(document).ready(function() {
                 $(".navbar-burger").click(function() {
@@ -110,16 +106,5 @@
                 });
             });
         </script>
-
-        {%- if google_analytics_id -%}
-        <script>
-            (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-            (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-            m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-                })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
-            ga('create', '{{ google_analytics_id }}', 'auto');
-            ga('send', 'pageview');
-        </script>
-        {%- endif -%}
     </body>
 </html>

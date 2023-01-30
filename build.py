@@ -22,7 +22,6 @@ if __name__ == "__main__":
     else:
         config = {
             "base_url": "file://" + output_dir,
-            "google_api_key": "XXX-GOOGLE-API_KEY",
         }
 
     site = staticjinja.Site.make_site(outpath=output_dir, env_globals=config)
